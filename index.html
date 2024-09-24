@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Stanley</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Stanley">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid">
+            <article class="producto">
+                <picture>
+                    <source srcset="producto1-large.jpg" media="(min-width: 768px)">
+                    <img src="producto1-small.jpg" alt="Termo Stanley 1L">
+                </picture>
+                <h3>Termo Stanley 1L</h3>
+                <p>$50.00</p>
+            </article>
+
+            <article class="producto">
+                <picture>
+                    <source srcset="producto2-large.jpg" media="(min-width: 768px)">
+                    <img src="producto2-small.jpg" alt="Botella Stanley 750ml">
+                </picture>
+                <h3>Botella Stanley 750ml</h3>
+                <p>$35.00</p>
+            </article>
+
+            <!-- Añadir más productos aquí -->
+        </div>
+    </section>
+
+    <!-- Tabla de información de productos -->
+    <section id="tabla-productos">
+        <h2>Información de Productos</h2>
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+            <tr>
+                <td>Termo Stanley 1L</td>
+                <td>$50.00</td>
+                <td>10 unidades</td>
+            </tr>
+            <tr>
+                <td>Botella Stanley 750ml</td>
+                <td>$35.00</td>
+                <td>15 unidades</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form action="enviar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="fecha">Fecha de entrega deseada:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
